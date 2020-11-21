@@ -7,6 +7,6 @@ request.get(urlConfig.getUrl).then((data) => {
   console.log(data);
 });
 
-request.post(urlConfig.postUrl).then((data) => {
-  console.log(data);
-});
+// request.post(urlConfig.postUrl).then((data) => {
+//   console.log(data);
+// });
