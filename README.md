@@ -8,12 +8,11 @@
 2、安装 webpack
 执行命令：npm install webpack webpack-cli --save-dev
 
-3、配置打包命令
-在 package.json 文件中，scripts 下添加"build": "webpack --entry=./index.js --output-filename=bundle.js --mode=development"
+3、配置打包命令，在 package.json 文件中，scripts 下添加
+"build": "webpack --entry=./index.js --output-filename=bundle.js --mode=development"
 
-4、运行打包命令
+4、运行打包命令，生成 bundle.js 文件
 npm run build
-生成 bundle.js 文件
 
 5、添加配置文件 webpack.config.js，修改 package.json 文件下的 build 配置
 
