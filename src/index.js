@@ -1,14 +1,12 @@
 import ajaxRequest from "./ajaxRequest";
-
-let getUrl = "https://mock.yonyoucloud.com/mock/6126/error";
-let postUrl = "https://mock.yonyoucloud.com/mock/6126/ceshi";
+import urlConfig from "./urlConfig";
 
 const http = new ajaxRequest();
 
-http.get(getUrl).then((data) => {
+http.get(urlConfig.getUrl).then((data) => {
   console.log(data);
 });
 
-http.post(postUrl).then((data) => {
+http.post(urlConfig.postUrl).then((data) => {
   console.log(data);
 });
