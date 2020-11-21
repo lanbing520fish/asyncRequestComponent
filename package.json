@@ -1,0 +1,26 @@
+{
+  "name": "asyncrequestcomponent",
+  "version": "1.0.0",
+  "description": "异步请求组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanbing520fish/asyncRequestComponent.git"
+  },
+  "author": "heyue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanbing520fish/asyncRequestComponent/issues"
+  },
+  "homepage": "https://github.com/lanbing520fish/asyncRequestComponent#readme",
+  "devDependencies": {
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
