@@ -4,7 +4,7 @@ import urlConfig from "./urlConfig";
 const request = new ajaxRequest();
 
 request.get(urlConfig.getUrl).then((data) => {
-  console.log(data);
+  console.log("data===", data);
 });
 
 // request.post(urlConfig.postUrl).then((data) => {
