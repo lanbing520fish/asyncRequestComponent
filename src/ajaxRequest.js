@@ -5,7 +5,6 @@ class httpRequest {
       let httpAjax = new XMLHttpRequest();
       httpAjax.onreadystatechange = () => {
         if (httpAjax.readyState == 4 && httpAjax.status == 200) {
-          document.getElementById("app").innerHTML = httpAjax.responseText;
           resolve(JSON.parse(httpAjax.responseText));
         }
       };
