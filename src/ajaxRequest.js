@@ -15,10 +15,10 @@ class httpRequest {
 }
 
 class ajaxRequest {
-  get(url) {
+  get(url, data) {
     return new Promise((resolve, reject) => {
       const getMethod = new httpRequest();
-      resolve(getMethod.ajax("get", url, true));
+      resolve(getMethod.ajax("get", url + "?" + JSON.stringify(data), true));
     });
   }
   post(url, data) {
