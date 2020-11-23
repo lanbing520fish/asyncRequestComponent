@@ -8,6 +8,15 @@ class httpRequest {
           resolve(JSON.parse(httpAjax.responseText));
         }
       };
+      if (type == "get") {
+        let queryString = "";
+        Object.keys(data).forEach((key) => {
+          queryString += queryString
+            ? "&" + key + "=" + data[key]
+            : key + "=" + data[key];
+        });
+        url += queryString ? "?" + queryString : "";
+      }
       httpAjax.open(type, url, async);
       httpAjax.send(data ? JSON.stringify(data) : null);
     });
@@ -18,7 +27,7 @@ class ajaxRequest {
   get(url, data) {
     return new Promise((resolve, reject) => {
       const getMethod = new httpRequest();
-      resolve(getMethod.ajax("get", url + "?" + JSON.stringify(data), true));
+      resolve(getMethod.ajax("get", url, true, data));
     });
   }
   post(url, data) {
