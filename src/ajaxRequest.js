@@ -4,8 +4,13 @@ class httpRequest {
     return new Promise((resolve) => {
       let httpAjax = new XMLHttpRequest();
       httpAjax.onreadystatechange = () => {
-        if (httpAjax.readyState == 4 && httpAjax.status == 200) {
+        if (httpAjax.readyState != 4) {
+          return;
+        }
+        if (httpAjax.status == 200) {
           resolve(JSON.parse(httpAjax.responseText));
+        } else {
+          reject(httpAjax);
         }
       };
       if (type == "get") {
@@ -37,5 +42,7 @@ class ajaxRequest {
     });
   }
 }
+
+class onreadystatechange {}
 
 export default ajaxRequest;
